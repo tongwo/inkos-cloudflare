@@ -1,0 +1,26 @@
+{
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  "name": "inkos",
+  "main": "src/index.ts",
+  "compatibility_date": "2025-07-01",
+  "compatibility_flags": ["nodejs_compat"],
+  "durable_objects": {
+    "bindings": [
+      { "name": "InkosAgent", "class_name": "InkosAgent" }
+    ]
+  },
+  "migrations": [
+    { "tag": "v1", "new_sqlite_classes": ["InkosAgent"] }
+  ],
+  "triggers": {
+    "crons": ["*/15 * * * *"]
+  },
+  "assets": {
+    "directory": "./studio/dist",
+    "binding": "ASSETS",
+    "not_found_handling": "single-page-application"
+  },
+  "vars": {
+    "ENVIRONMENT": "production"
+  }
+}
