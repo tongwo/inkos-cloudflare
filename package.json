@@ -1,0 +1,35 @@
+{
+  "name": "inkos-cloudflare",
+  "version": "1.0.0",
+  "description": "InkOS Cloudflare — 24/7 AI story writing agent powered by Cloudflare Workers + Agents SDK",
+  "type": "module",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "build": "wrangler deploy --dry-run",
+    "types": "wrangler types",
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "keywords": [
+    "inkos",
+    "story-writing",
+    "ai-agent",
+    "cloudflare",
+    "workers"
+  ],
+  "author": "",
+  "license": "AGPL-3.0-only",
+  "dependencies": {
+    "@cloudflare/ai-chat": "^0.10.0",
+    "agents": "^0.19.0",
+    "ai": "^7.0.37",
+    "zod": "^4.4.3"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^5.20260724.1",
+    "typescript": "^5.7.3",
+    "vitest": "^4.1.10",
+    "wrangler": "^4.114.0"
+  }
+}
